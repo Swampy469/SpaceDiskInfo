@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-
 public class SpaceDisk {
 
     static JFrame frame = new JFrame();
@@ -15,8 +14,6 @@ public class SpaceDisk {
     static JButton bottone = new JButton("RUN");
     static JTextArea text = new JTextArea();
 
-
-
    static public void calcolo(JLabel label_1, JLabel label_2, JLabel label_3){
 
        String save;
@@ -24,9 +21,9 @@ public class SpaceDisk {
 
        File partition_name = new File(save); // Insert the letter of your partition (ex: 'C:' , 'D:')
 
-        label_1.setText(String.format("Total Space: %.2f GB", (double)partition_name.getTotalSpace()/1073741824)); //Total
-        label_2.setText(String.format("Available Space: %.2f GB", (double)partition_name.getFreeSpace()/1073741824)); // Available
-        label_3.setText(String.format("Used Space: %.2f GB", (double)partition_name.getUsableSpace()/1073741824)); //Used
+       label_1.setText(String.format("Total Space: %.2f GB", (double)partition_name.getTotalSpace()/1073741824)); //Total
+       label_2.setText(String.format("Available Space: %.2f GB", (double)partition_name.getFreeSpace()/1073741824)); // Available
+       label_3.setText(String.format("Used Space: %.2f GB", (double)partition_name.getUsableSpace()/1073741824)); //Used
 
     }
 
@@ -34,7 +31,7 @@ public class SpaceDisk {
 
        int height = 280;
        int width = 440;
-        int text_size=25;
+       int text_size=25;
 
         frame.setBounds(0,0,width,height);
         frame.setLayout(null);
